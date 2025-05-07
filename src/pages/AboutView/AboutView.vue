@@ -6,7 +6,7 @@ import DSButton from '@/components/DS/Button/DSButton.vue';
 <template>
   <div>
     <h1>About</h1>
-    <DSButton href="/test">To Testpage</DSButton>
+    <DSButton href="/folloknipling-nettside/test">To Testpage</DSButton>
   </div>
 </template>
 

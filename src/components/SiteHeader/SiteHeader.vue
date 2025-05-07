@@ -7,11 +7,11 @@ import DSButton from '../DS/Button/DSButton.vue';
 <template>
   <div class="header-wrapper">
     <div class="content-left">
-      <DSButton type="subtle" @click="$router.push('/home')">Forside</DSButton>
+      <DSButton type="subtle" @click="$router.push('/folloknipling-nettside/home')">Forside</DSButton>
     </div>
     <h1 class="title">Folloknipling</h1>
     <div class="content-right">
-      <DSButton type="subtle" @click="$router.push('/about')">Om Oss</DSButton>
+      <DSButton type="subtle" @click="$router.push('/folloknipling-nettside/about')">Om Oss</DSButton>
     </div>
   </div>
 </template>
