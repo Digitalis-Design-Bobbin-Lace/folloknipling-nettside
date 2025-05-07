@@ -1,0 +1,44 @@
+/* Define light-only variable-variants*/
+.light {
+  --color-background: white;
+  --color-background-highlight: #ccc;
+  --color-background-highlight2: #aaa;
+  --color-text: black;
+  --color-header-background: #ddd;
+  --color-border: #777;
+}
+
+
+/* Define dark-only variable-variants*/
+.dark {
+  --color-background: #222;
+  --color-background-highlight: #555;
+  --color-background-highlight2: #777;
+  --color-text: white;
+  --color-header-background: #333;
+  --color-border: #aaa;
+}
+
+/* Define universal and fallback variable-variants */
+:root {
+  --font-family-default: Arial, Helvetica, sans-serif;
+  --radius-small: 3px;
+  --radius-medium: 5px;
+  --radius-large: 10px;
+
+  --button-color-primary: var(--color-background-highlight);
+  --button-color-hover: var(--color-background-highlight);
+  --button-color-primary-hover: var(--color-background-highlight2);
+
+}
+
+/* Apply variables to :root */
+:root {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family-default);
+}
+
+body {
+  margin: 0;
+}

@@ -1,0 +1,12 @@
+- [ ] add feature parity for DSButton with button and extend
+  - [x] add on-click event to DSButton
+  - [x] add disabled property to DSButton
+  - [ ] add href prop to DSButton; if present, ignore on-click and work as link
+- [ ] add multiple buttons to header
+  - [x] Forside
+  - [ ] Informasjon; might have to be a new DSDropdownButton component
+  - [ ] Kurs; might have to be a new DSDropdownButton component
+  - [ ] Våre samarbeidspartnere
+- [ ] add content wrapper component
+  - [ ] make content wrapper gather the url-extensions and open the correct page
+- [ ] add more pages
