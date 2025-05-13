@@ -13,7 +13,9 @@
     "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
     "lint:eslint": "eslint . --fix",
     "lint": "run-s lint:*",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "publish:gh-pages": "sh ./shellScripts/ghPages.sh",
+    "publish:gh-pages-force": "sh ./shellScripts/ghPagesForce.sh"
   },
   "dependencies": {
     "sass": "^1.87.0",

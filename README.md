@@ -43,3 +43,15 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+### Push to github pages
+
+```sh
+git subtree push --prefix dist origin gh-pages
+```
+
+Or to force push:
+
+```sh
+git push origin $(git subtree split --prefix dist HEAD):gh-pages --force
+```

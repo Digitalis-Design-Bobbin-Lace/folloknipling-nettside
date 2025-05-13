@@ -1,7 +1,13 @@
-- [ ] add feature parity for DSButton with button and extend
+- [x] add feature parity for DSButton with button and extend
   - [x] add on-click event to DSButton
   - [x] add disabled property to DSButton
-  - [ ] add href prop to DSButton; if present, ignore on-click and work as link
+  - [x] add href prop to DSButton; if present, ignore on-click and work as link
+- [ ] add DSDropdownButton component
+  - [ ] add slots for DSDropdownButtonItems
+  - [ ] add href prop to DSDropdownButtonItem for use when the main-element is clicked, not the sub-buttons
+  - [ ] add DSDropdownButtonItem component
+    - [ ] add disabled property to DSDropdownButtonItem
+    - [ ] add href prop to DSDropdownButtonItem
 - [ ] add multiple buttons to header
   - [x] Forside
   - [ ] Informasjon; might have to be a new DSDropdownButton component

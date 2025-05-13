@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { BUTTON_TYPES } from './types';
 import { useRoute, useRouter } from 'vue-router';
+import { BUTTON_TYPES } from '@/components/DS/Button/types'
 
 const router = useRouter();
 const route = useRoute();
@@ -52,52 +52,5 @@ const clickHandler = () => {
 </template>
 
 <style scoped lang="scss">
-.btn {
-  width: min-content;
-  padding: 5px;
-  border-radius: var(--radius-medium);
-  text-wrap: nowrap;
-
-  &-default {
-    border: 1px solid var(--color-border);
-
-    &:hover {
-      background-color: var(--button-color-hover);
-    }
-  }
-
-  &-primary {
-    background-color: var(--button-color-primary);
-    border: 1px solid var(--color-border);
-
-    &:hover {
-      background-color: var(--button-color-primary-hover);
-    }
-  }
-
-  &-subtle {
-    border-bottom: 1px solid var(--color-border);
-
-    &:hover {
-      background-color: var(--button-color-hover);
-    }
-
-    &-primary {
-      border-bottom: 1px solid var(--color-border);
-      background-color: var(--button-color-primary);
-
-      &:hover {
-        background-color: var(--button-color-primary-hover);
-      }
-    }
-  }
-
-  &-disabled {
-    color: grey;
-
-    &:hover {
-      background-color: transparent;
-    }
-  }
-}
+@use '@/components/DS/Button/style.scss';
 </style>

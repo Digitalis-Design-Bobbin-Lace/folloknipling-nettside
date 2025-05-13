@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import DSDropdownButton from '../DS/Button/DropdownButton/DSDropdownButton.vue';
+import DSDropdownButtonItem from '../DS/Button/DropdownButton/DSDropdownButtonItem.vue';
 import DSButton from '../DS/Button/DSButton.vue';
 
 
@@ -6,12 +8,27 @@ import DSButton from '../DS/Button/DSButton.vue';
 
 <template>
   <div class="header-wrapper">
-    <div class="content-left">
-      <DSButton type="subtle" @click="$router.push('/folloknipling-nettside/home')">Forside</DSButton>
+    <div class="content content-left">
+      <DSButton type="subtle" href="/folloknipling-nettside/home">Forside</DSButton>
+      <DSDropdownButton type="subtle" show-more-text="Vis kurs" href="/folloknipling-nettside/courses">
+        Kurs
+        <template #content>
+          <DSDropdownButtonItem href="/folloknipling-nettside/courses">Kursoversikt</DSDropdownButtonItem>
+          <DSDropdownButtonItem href="/folloknipling-nettside/registration">Påmelding</DSDropdownButtonItem>
+          <DSDropdownButtonItem href="/folloknipling-nettside/teachers">Våre lærere</DSDropdownButtonItem>
+        </template>
+        <template #show-more>
+          <DSDropdownButtonItem href="/folloknipling-nettside/course/Nybegynner 1A">Nybegynner 1A</DSDropdownButtonItem>
+          <DSDropdownButtonItem href="/folloknipling-nettside/course/Nybegynner 1B">Nybegynner 1B</DSDropdownButtonItem>
+          <DSDropdownButtonItem href="/folloknipling-nettside/course/Nybegynner 2A">Nybegynner 2A</DSDropdownButtonItem>
+          <DSDropdownButtonItem href="/folloknipling-nettside/course/Nybegynner 2B">Nybegynner 2B</DSDropdownButtonItem>
+          <DSDropdownButtonItem href="/folloknipling-nettside/course/Binche">Binche</DSDropdownButtonItem>
+        </template>
+      </DSDropdownButton>
     </div>
     <h1 class="title">Folloknipling</h1>
-    <div class="content-right">
-      <DSButton type="subtle" @click="$router.push('/folloknipling-nettside/about')">Om Oss</DSButton>
+    <div class="content content-right">
+      <DSButton type="subtle" href="/folloknipling-nettside/about">Om Oss</DSButton>
     </div>
   </div>
 </template>
@@ -26,20 +43,15 @@ import DSButton from '../DS/Button/DSButton.vue';
   padding: 0 50px;
 }
 
-.content-left,
-.content-right {
-  flex: 1;
-}
-
-.content-left,
-.content-right {
+.content {
   display: flex;
   align-items: center;
+  flex: 1;
+  gap: 10px;
 }
 
 .content-left {
   justify-content: left;
-  width: 400px;
 }
 
 .content-right {

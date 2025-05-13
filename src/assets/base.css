@@ -6,6 +6,8 @@
   --color-text: black;
   --color-header-background: #ddd;
   --color-border: #777;
+
+  --color-error: #ff3737
 }
 
 
@@ -17,19 +19,27 @@
   --color-text: white;
   --color-header-background: #333;
   --color-border: #aaa;
+  --color-border-highlight: #fff;
+
+  --color-error: #ff3737
 }
 
 /* Define universal and fallback variable-variants */
 :root {
   --font-family-default: Arial, Helvetica, sans-serif;
+
   --radius-small: 3px;
   --radius-medium: 5px;
   --radius-large: 10px;
 
-  --button-color-primary: var(--color-background-highlight);
-  --button-color-hover: var(--color-background-highlight);
-  --button-color-primary-hover: var(--color-background-highlight2);
+  --padding-small: 5px;
+  --padding-medium: 10px;
+  --padding-large: 20px;
 
+  --color-button-primary: var(--color-background-highlight);
+  --color-button-hover: var(--color-background-highlight);
+  --color-button-primary-hover: var(--color-background-highlight2);
+  --color-button-dropdown-panel: var(--color-header-background);
 }
 
 /* Apply variables to :root */
