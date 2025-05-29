@@ -8,6 +8,7 @@ import ajvErrors from "ajv-errors";
 import schema from '@/assets/Schemas/Registration Forms/RegistrationFormBasic.json'
 import uischema from '@/assets/Schemas/UiSchema/UiSchema.json'
 import DSButton from "@/components/DS/Button/DSButton.vue";
+import { ValidationMode } from "@jsonforms/core";
 
 const ajv = new Ajv({ allErrors: true, strict: false });
 ajvErrors(ajv);
@@ -79,7 +80,7 @@ console.log(myStyles);
         <div v-for="(error, idx) in state.errors" :key="idx">{{ error.message }}</div>
       </div>
       <JsonForms :ajv="ajv" :data="data" :renderers="renderers" :schema="schema" :uischema="uischema"
-        :validationMode="state.validationMode" @change="onChange" />
+        :validationMode="state.validationMode as ValidationMode" @change="onChange" />
     </div>
   </div>
   <DSButton @click="registerButtonOnClick">Registrer</DSButton>
