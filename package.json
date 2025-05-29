@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -18,6 +21,13 @@
     "publish:gh-pages-force": "sh ./shellScripts/ghPagesForce.sh"
   },
   "dependencies": {
+    "@jsonforms/core": "^3.5.1",
+    "@jsonforms/vue": "^3.5.1",
+    "@jsonforms/vue-vanilla": "^3.5.1",
+    "ajv": "^8.17.1",
+    "ajv-errors": "^3.0.0",
+    "core-js": "^3.42.0",
+    "jsonschema": "^1.5.0",
     "sass": "^1.87.0",
     "vite-plugin-html": "^3.2.2",
     "vue": "^3.5.13",

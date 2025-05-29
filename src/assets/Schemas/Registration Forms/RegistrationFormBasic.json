@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Navn",
+      "type": "string"
+    },
+    "address": {
+      "title": "Adresse",
+      "type": "string"
+    },
+    "phoneNumber": {
+      "title": "Telefon nummer",
+      "type": "string"
+    },
+    "birthYear": {
+      "title": "Fødsels år",
+      "type": "string",
+      "pattern": "^[0-9]{4}$",
+      "errorMessage": {
+        "pattern": "År må bestå av 4 siffer"
+      }
+    },
+    "eMail": {
+      "title": "E-post",
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[\\w\\+-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+      "errorMessage": {
+        "pattern": "Må være en gyldig e-post adresse"
+      }
+    },
+    "allergies": {
+      "title": "Allergier",
+      "type": "string",
+      "description": "Kun nødvendig på fysiske kurs"
+    },
+    "other": {
+      "title": "Andre detaljer",
+      "type": "string"
+    }
+  },
+  "required": ["name", "address", "phoneNumber", "birthYear", "eMail"],
+  "errorMessage": {
+    "required": {
+      "name": "Vennligst fyll in navn",
+      "address": "Vennligst fyll in adresse",
+      "phoneNumber": "Vennligst fyll in telefon nummer",
+      "birthYear": "Vennligst fyll in fødsels år",
+      "eMail": "Vennligst fyll in e-post"
+    }
+  }
+}

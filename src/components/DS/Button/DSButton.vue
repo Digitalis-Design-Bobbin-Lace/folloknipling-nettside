@@ -3,6 +3,8 @@ import { computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { BUTTON_TYPES } from '@/components/DS/Button/types'
 
+const emit = defineEmits(['click'])
+
 const router = useRouter();
 const route = useRoute();
 
@@ -40,8 +42,10 @@ const buttonClasses = computed(() => {
 
 const clickHandler = () => {
   if (props.href) {
-    router.push(props.href)
+    router.push(props.href);
+    return;
   }
+  emit('click');
 }
 </script>
 

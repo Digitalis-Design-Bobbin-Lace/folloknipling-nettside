@@ -4,12 +4,12 @@
   --color-background-highlight: #ccc;
   --color-background-highlight2: #aaa;
   --color-text: black;
+  --color-text-muted: color-mix(in srgb, black, white, 25%);
   --color-header-background: #ddd;
   --color-border: #777;
 
-  --color-error: #ff3737
+  --color-error: #ff3737;
 }
-
 
 /* Define dark-only variable-variants*/
 .dark {
@@ -21,7 +21,7 @@
   --color-border: #aaa;
   --color-border-highlight: #fff;
 
-  --color-error: #ff3737
+  --color-error: #ff3737;
 }
 
 /* Define universal and fallback variable-variants */
@@ -35,6 +35,8 @@
   --padding-small: 5px;
   --padding-medium: 10px;
   --padding-large: 20px;
+
+  --color-text-muted: color-mix(in srgb, var(--color-text) 75%, var(--color-background) 25%);
 
   --color-button-primary: var(--color-background-highlight);
   --color-button-hover: var(--color-background-highlight);
@@ -51,4 +53,8 @@
 
 body {
   margin: 0;
+}
+
+h1 {
+  justify-self: center;
 }

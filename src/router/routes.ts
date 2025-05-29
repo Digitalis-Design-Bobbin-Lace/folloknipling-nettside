@@ -21,10 +21,10 @@ const routes = [
   { path: '/folloknipling-nettside/teachers', component: TeachersView },
   { path: '/folloknipling-nettside/test', component: TestView },
 
-  { path: '/folloknipling-nettside/course/Nybegynner 1A', component: Course1A },
-  { path: '/folloknipling-nettside/course/Nybegynner 1B', component: Course1B },
-  { path: '/folloknipling-nettside/course/Nybegynner 2A', component: Course2A },
-  { path: '/folloknipling-nettside/course/Nybegynner 2B', component: Course2B },
+  { path: '/folloknipling-nettside/course/Nybegynner%201A', component: Course1A },
+  { path: '/folloknipling-nettside/course/Nybegynner%201B', component: Course1B },
+  { path: '/folloknipling-nettside/course/Nybegynner%202A', component: Course2A },
+  { path: '/folloknipling-nettside/course/Nybegynner%202B', component: Course2B },
   { path: '/folloknipling-nettside/course/Binche', component: CourseBinche },
 ]
 
